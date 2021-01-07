@@ -693,8 +693,8 @@ section {
   -webkit-box-flex: 0.6;
       -ms-flex: 0.6;
           flex: 0.6;
-  font-weight: 700;
-  font-size: 2.231vw;
+  font-weight: 400;
+  font-size: 2vw;
   margin-top: 25px;
   margin-bottom: 2.083vw;
   letter-spacing: -0.037vw;
