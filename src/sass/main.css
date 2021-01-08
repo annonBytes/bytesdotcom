@@ -136,7 +136,7 @@ section {
 
 @media only screen and (max-width: 37.5em) {
   .preloader #logo {
-    width: 280px;
+    width: 300px;
   }
 }
 
@@ -644,17 +644,6 @@ section {
   }
 }
 
-.header:after {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  background: url("../img/svg/home-bg.svg") 100% 0 no-repeat;
-}
-
 @media only screen and (max-width: 56.25em) {
   .header:after {
     -webkit-transform: rotate(90deg);
@@ -685,8 +674,21 @@ section {
   display: flex;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header .hero .float {
+    margin-top: -300px;
+  }
+}
+
 .header .hero .float .text-container {
   margin-top: 250px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .hero .float .text-container {
+    z-index: 1;
+    width: 300px;
+  }
 }
 
 .header .hero .float .text-container h1 {
@@ -700,10 +702,24 @@ section {
   letter-spacing: -0.037vw;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header .hero .float .text-container h1 {
+    font-size: 5vw;
+    width: 100%;
+    font-weight: 200;
+  }
+}
+
 .header .hero .float .text-container h1 .city {
   color: #f8ca64;
   font-style: italic;
   font-size: 2vw;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .hero .float .text-container h1 .city {
+    font-size: 5vw;
+  }
 }
 
 .header .hero .float .text-container .subheading {
@@ -711,11 +727,25 @@ section {
   color: #c8c8c8;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header .hero .float .text-container .subheading {
+    font-size: 4vw;
+  }
+}
+
 .header .hero .float .hero-img {
-  width: 100%;
+  max-width: 100%;
   -webkit-box-flex: 0.4;
       -ms-flex: 0.4;
           flex: 0.4;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .hero .float .hero-img {
+    opacity: 0.1;
+    position: absolute;
+    left: -40px;
+  }
 }
 
 .nav-anim .bar1 {
