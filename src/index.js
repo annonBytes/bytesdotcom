@@ -7,6 +7,7 @@ preloaderTL.to(".preloader", {
   delay: "-=3",
 });
 
+
 //Getting the exact sizes of the outlines
 // const logo = document.querySelectorAll("#logo path");
 // for (let i = 0; i < logo.length; i++) {
@@ -69,3 +70,5 @@ allLinks.forEach((link) => {
     navIcon.classList.remove("nav-anim");
   });
 });
+
+

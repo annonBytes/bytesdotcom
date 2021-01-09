@@ -124,6 +124,7 @@ section {
   left: 0;
   background-color: #000000;
   z-index: 20;
+  position: fixed;
 }
 
 .preloader #logo {
@@ -762,5 +763,34 @@ section {
 .nav-anim .bar3 {
   -webkit-transform: rotate(45deg) translate(-7px, -8px);
           transform: rotate(45deg) translate(-7px, -8px);
+}
+
+.contact {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 12;
+  grid-column: 2/14;
+  padding: 6rem;
+}
+
+.contact-box__wrapper {
+  margin-top: 8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 4rem;
+}
+
+.contact-box a {
+  font-size: 2.75rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Calibre-Medium", sans-serif;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+
+.contact-box a:hover {
+  color: #f8ca64;
 }
 /*# sourceMappingURL=main.css.map */
