@@ -793,4 +793,15 @@ section {
 .contact-box a:hover {
   color: #f8ca64;
 }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 4rem;
+  color: #797575;
+}
 /*# sourceMappingURL=main.css.map */
