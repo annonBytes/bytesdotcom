@@ -168,7 +168,7 @@
   }
   .hero {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 10%;
     transform: translateY(-50%);
     @media only screen and (max-width: 56.25em) {
@@ -188,32 +188,37 @@
           width: 300px;
        }
         h1 {
-          flex: 0.6;
-          font-weight: 400;
-          font-size: 2vw;
-          margin-top: 25px;
-          margin-bottom: 2.083vw;
-          letter-spacing: -0.037vw;
+          margin-top: 24px;
+          margin-bottom: 10px;
+          font-family: Spacegrotesk, sans-serif;
+          color: $white;
+          font-size: 78px;
+          line-height: 1.05;
+          letter-spacing: -0.03em;
+          
           @media only screen and (max-width: 56.25em) {
            font-size: 5vw;
            width: 100%;
            font-weight: 200;
          }
-          .city {
-            color: $primary-color;
-            font-style: italic;
-            font-size: 2vw;
-            @media only screen and (max-width: 56.25em) {
-              font-size: 5vw;
-           }
-          }
+         .span-brand{
+          color: $primary-color;
+        }
+          
         }
         .subheading {
-          font-size: 1.5vw;
-          color: #c8c8c8;
+          // font-size: 1.5vw;
+          // color: #c8c8c8;
+          max-width: 470px;
+          font-family: Karla, sans-serif;
+          font-size: 18px;
+          line-height: 1.7;
+          font-weight: 400;
+      
           @media only screen and (max-width: 56.25em) {
             font-size: 4vw;
          }
+
         }
       }
 
@@ -228,6 +233,44 @@
       }
     }
   }
+
+  .scroll-wrapper{
+    display:flex;
+    align-items: center;
+    color: #d9d9e2;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    margin-top: -120px;
+    -webkit-box-align: center;
+
+     .magic-mouse {
+       position: relative;
+       width: 18px;
+       height: 30px;
+       border: 2px solid #fff;
+       border-radius: 15px;
+
+       &.scroll i{
+         position: absolute;
+         top: 6px;
+         left: 50%;
+         border-radius: 4px;
+         background-color: #fff;
+         text-indent: 100%;
+         white-space: nowrap;
+         overflow: hidden;
+       }
+       
+       &.scroll.vertical i {
+        width: 4px;
+        height: 9px;
+        margin-left: -2px;
+        animation:vertical-scroll 820ms ease-in-out infinite;
+      }
+
+     }
+
+  }
 }
 
 .nav-anim .bar1 {
@@ -241,4 +284,11 @@
 
 .nav-anim .bar3 {
   transform: rotate(45deg) translate(-7px, -8px);
+}
+
+/* Animations for Magic Mouse*/
+@keyframes vertical-scroll {
+  0% {top:6px;}
+  50% {top:10px;}
+  100% {top:6px;}
 }

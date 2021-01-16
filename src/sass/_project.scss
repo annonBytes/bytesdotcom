@@ -1,85 +1,128 @@
-.project {
-    grid-column: 2/14;
-    padding: 6rem;
-
-    &-box__wrapper {
-        display: grid;grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        grid-gap: 4rem;
-        color: $black;
-        margin-top: 6rem;
-    }
-
-    &-box {
+.project 
+{
+        grid-column: 2/14;
         padding: 2rem;
-        height: 35rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
 
-        &:hover {
-            border: solid 2px $white;
-            color: $white;
-        }
-    }
-    .project-box:nth-child(1) {
-        background: linear-gradient(to bottom, #F3CBAB, #FEEDCA);
-    }
-    .project-box:nth-child(2) {
-        background: linear-gradient(to bottom, #B1E5F9, #F4D2FE);
-    }
-    .project-box:nth-child(3) {
-        background: linear-gradient(to bottom, #DBB4F3, #EFB7D7);
-    }
-    .project-box:nth-child(4) {
-        background: linear-gradient(to bottom, #EFA971, #E4CAFE);
-        .project-box__link {
-            width: min-content;
-        }
-    }
-    .project-box:nth-child(5) {
-        background: linear-gradient(to right, #B1E5F9, #F4D2FE);
-        .project-box__link {
-            width: min-content;
-        }
-    }
-
-    &-box__link {
-        align-self: flex-end;
-        width: 20%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @media only screen and (max-width: 56.25em) { // tab-port
-            width: 30%;
+        .s-cases {
+            height: 100vh;
+            position: relative;
         }
 
-    }
-    &-box__content {
-        align-self: center;
-    }
+
+.s-cases-next, .s-cases-prev
+{
+         z-index: 2;
+         display: flex;
+         bottom: 1.042vw;
+         width: 3.472vw;
+         cursor: pointer;
+         position: absolute;
+         align-items: center;
+         border-radius: 100%;
+         justify-content: center;
+         background: rgba(0,0,0,.2);
 }
 
-// hover state
-.project-box:nth-child(1), .project-box:nth-child(2), .project-box:nth-child(3), .project-box:nth-child(4), .project-box:nth-child(5) {
-    background: linear-gradient(to bottom, #F3CBAB, #FEEDCA);
-    &:after {
-        content: '';
-        position: absolute;
-        width: 103%;
-        height: 101%;
-        top: 1rem;
-        right: 0;
-        z-index: -1;
-    }
-    &:hover {
-        background: none;
-        background-color: $black;
-    }
-    &:hover  img {
-        filter: invert(1);
-    }
-    &:hover:after {
-        outline: 2px solid $white;
-    }
+
+.s-cases-next .i-arrow, .s-cases-prev .i-arrow
+{
+         width: 1.111vw;
+         height: 1.111vw;
+         stroke: #fff;
+         position: relative;
+}
+      
+.i-arrow
+{
+          top: 0;
+          right: 0;
+          fill: none;
+          overflow: visible;
+          stroke-width: 2;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          transition: opacity .3s cubic-bezier(.25,.25,.75,.75);
+}
+    
+.s-cases-next
+{
+          right: 2.778vw;
+}
+
+.s-cases-prev
+{
+        left: 2.778vw;
+        transform: rotate(-180deg);
+}
+
+.s-cases-prev.is-hidden
+{
+          cursor: default;
+}
+
+.s-cases-prev.s-cases-prev.is-hidden .i-arrow
+{
+          opacity: .2;
+}
+
+.s-cases-scroll
+{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-wrap: wrap;
+        background: #000;
+        white-space: nowrap;
+
+
+        .s-cases-item
+        {
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+
+            .s-cases-title{
+                z-index: 2;
+                left: 2.778vw;
+                right: 2.778vw;
+                bottom: 7.639vw;
+                position: absolute;
+                pointer-events: none;
+            }
+
+            .a-transition, .a-transition-cover, .s-cases-cover, .s-cases-image 
+            {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+            }
+
+            .s-cases-image{
+                background: #000;
+                perspective: 1000px;
+
+                .s-cases-image .img-c {
+                    opacity: .7;
+                    will-change: transform;
+                    transition: opacity .3s cubic-bezier(.25,.25,.75,.75);
+                }
+
+                .img-c {
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .img-c, .is-incoming {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    position: absolute;
+                }
+            }
+        }
+
+}
 }
