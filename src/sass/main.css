@@ -830,127 +830,26 @@ section {
   padding: 2rem;
 }
 
-.project .s-cases {
-  height: 100vh;
-  position: relative;
-}
-
-.project .s-cases-next, .project .s-cases-prev {
-  z-index: 2;
+.wrapper {
+  max-height: 120px;
+  border: 1px solid #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  bottom: 1.042vw;
-  width: 3.472vw;
-  cursor: pointer;
-  position: absolute;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
 }
 
-.project .s-cases-next .i-arrow, .project .s-cases-prev .i-arrow {
-  width: 1.111vw;
-  height: 1.111vw;
-  stroke: #fff;
-  position: relative;
+.wrapper::-webkit-scrollbar {
+  width: 0;
 }
 
-.project .i-arrow {
-  top: 0;
-  right: 0;
-  fill: none;
-  overflow: visible;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  transition: opacity 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
-}
-
-.project .s-cases-next {
-  right: 2.778vw;
-}
-
-.project .s-cases-prev {
-  left: 2.778vw;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.project .s-cases-prev.is-hidden {
-  cursor: default;
-}
-
-.project .s-cases-prev.s-cases-prev.is-hidden .i-arrow {
-  opacity: .2;
-}
-
-.project .s-cases-scroll {
-  width: 100%;
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background: #000;
-  white-space: nowrap;
-}
-
-.project .s-cases-scroll .s-cases-item {
-  color: #fff;
-  cursor: pointer;
-  position: relative;
-}
-
-.project .s-cases-scroll .s-cases-item .s-cases-title {
-  z-index: 2;
-  left: 2.778vw;
-  right: 2.778vw;
-  bottom: 7.639vw;
-  position: absolute;
-  pointer-events: none;
-}
-
-.project .s-cases-scroll .s-cases-item .a-transition, .project .s-cases-scroll .s-cases-item .a-transition-cover, .project .s-cases-scroll .s-cases-item .s-cases-cover, .project .s-cases-scroll .s-cases-item .s-cases-image {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-}
-
-.project .s-cases-scroll .s-cases-item .s-cases-image {
-  background: #000;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-.project .s-cases-scroll .s-cases-item .s-cases-image .s-cases-image .img-c {
-  opacity: .7;
-  will-change: transform;
-  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
-  transition: opacity 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
-}
-
-.project .s-cases-scroll .s-cases-item .s-cases-image .img-c {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.project .s-cases-scroll .s-cases-item .s-cases-image .img-c, .project .s-cases-scroll .s-cases-item .s-cases-image .is-incoming {
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: absolute;
+.item {
+  min-width: 110px;
+  height: 110px;
+  line-height: 110px;
+  text-align: center;
+  background-color: #ddd;
+  margin-right: 2px;
 }
 
 .contact {
