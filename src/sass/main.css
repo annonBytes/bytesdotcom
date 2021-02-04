@@ -831,8 +831,8 @@ section {
 }
 
 .wrapper {
-  max-width: 100vw;
-  border: 1px solid #ddd;
+  min-width: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -844,12 +844,64 @@ section {
 }
 
 .item {
-  min-width: 110px;
-  height: 110px;
+  width: 100%;
   line-height: 110px;
   text-align: center;
   background-color: #ddd;
   margin-right: 2px;
+}
+
+.s-cases-item {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.s-cases-image {
+  width: 100%;
+  height: 100%;
+  padding: 150px;
+}
+
+.s-cases-image .img-c {
+  opacity: .7;
+  will-change: transform;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+.img-c {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-c, .is-incoming {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.s-cases-title {
+  z-index: 2;
+  position: inherit;
+  pointer-events: none;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.s-cases-title h3 {
+  opacity: .8;
+  font-weight: 600;
+  font-size: 1.25vw;
+  line-height: 2.292vw;
+}
+
+.s-cases-title h2 {
+  font-size: 1.944vw;
+  line-height: 2.917vw;
+  letter-spacing: -.054vw;
 }
 
 .contact {
