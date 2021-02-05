@@ -1,75 +1,92 @@
 .project{
     grid-column: 2/14;
-    padding: 2rem; }
+   
+    .project__wrapper
+    {
+        min-width: 100%;
+        width: 100vw;
+        display: flex;
+        overflow-x: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+          
+        .project__wrapper__item
+        {
+            width: 100%;
+            line-height: 110px;
+            text-align: center;
+            background-color: #000;
 
-   .wrapper{
-      min-width: 100%;
-      width: 100vw;
-    //   border: 1px solid #ddd;
-      display: flex;
-      overflow-x: auto;
-      
+            .s-cases-item {
+                color: #fff;
+                cursor: pointer;
+                position: relative;
+
+                .s-cases-image
+                {
+                    width: 100%;
+                    height: 100%;
+                    padding: 50px;
+                }
+
+                .s-cases-image .img-c {
+                    opacity: .7;
+                    will-change: transform;
+                    transition: opacity .3s cubic-bezier(.25,.25,.75,.75);
+                }
+
+                .img-c {
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
+                .img-c, .is-incoming {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    position: absolute;
+                }
+
+                .s-cases-title {
+                    z-index: 2;
+                    position: inherit;
+                    pointer-events: none;
+                    text-align: left;
+                    // margin-left: 50px;
+                    margin-left: -40px;
+                    padding: 100px;     
+                }
+                
+                .s-cases-title h3 {
+                    opacity: .8;
+                    font-weight: 600;
+                    font-size: 1.25vw;
+                    line-height: 2.292vw;
+                }
+                
+                .s-cases-title h2 {
+                    font-size: 1.944vw;
+                    line-height: 2.917vw;
+                    letter-spacing: -.054vw;
+                }
+                
+            }
+        }
+     }
+}
+
+   
+
+   .project__wrapper::-webkit-scrollbar{
+    display: none;
    }
 
-   .wrapper::-webkit-scrollbar{
-       width: 0;
-   }
+ 
 
-   .item{
-    width: 100%;
-    line-height: 110px;
-    text-align: center;
-    background-color: #ddd;
-    margin-right: 2px;
-}
 
-.s-cases-item {
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-}
 
-.s-cases-image{
-width: 100%;
-height: 100%;
-padding: 150px;
-}
 
-.s-cases-image .img-c {
-    opacity: .7;
-    will-change: transform;
-    transition: opacity .3s cubic-bezier(.25,.25,.75,.75);
-}
 
-.img-c {
-    height: 100%;
-    object-fit: cover;
-}
 
-.img-c, .is-incoming {
-    top: 0;
-    left: 0;
-    width: 100%;
-    position: absolute;
-}
 
-.s-cases-title {
-    z-index: 2;
-    position: inherit;
-    pointer-events: none;
-    text-align: left;
-    margin-left: 50px;
-}
 
-.s-cases-title h3 {
-    opacity: .8;
-    font-weight: 600;
-    font-size: 1.25vw;
-    line-height: 2.292vw;
-}
-
-.s-cases-title h2 {
-    font-size: 1.944vw;
-    line-height: 2.917vw;
-    letter-spacing: -.054vw;
-}
