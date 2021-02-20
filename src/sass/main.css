@@ -688,6 +688,13 @@ section {
 @media only screen and (max-width: 56.25em) {
   .header .hero .float {
     margin-top: -300px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header .hero .float {
+    margin-top: -400px;
   }
 }
 
@@ -695,10 +702,17 @@ section {
   margin-top: 250px;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 375px) {
   .header .hero .float .text-container {
     z-index: 1;
     width: 300px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header .hero .float .text-container {
+    width: 600px;
+    margin-top: 400px;
   }
 }
 
@@ -714,7 +728,7 @@ section {
 
 @media only screen and (max-width: 56.25em) {
   .header .hero .float .text-container h1 {
-    font-size: 5vw;
+    font-size: 6vw;
     width: 100%;
     font-weight: 200;
   }
@@ -732,9 +746,17 @@ section {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 375px) {
   .header .hero .float .text-container .subheading {
-    font-size: 4vw;
+    width: 300px;
+    display: inline-block;
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .header .hero .float .text-container .subheading {
+    font-size: 2.5vw;
   }
 }
 
@@ -766,12 +788,25 @@ section {
   -webkit-box-align: center;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header .scroll-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 .header .scroll-wrapper .magic-mouse {
   position: relative;
   width: 18px;
   height: 30px;
   border: 2px solid #fff;
   border-radius: 15px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header .scroll-wrapper .magic-mouse {
+    position: relative;
+  }
 }
 
 .header .scroll-wrapper .magic-mouse.scroll i {
@@ -859,10 +894,39 @@ section {
   background-color: #000;
 }
 
+@media only screen and (max-width: 375px) {
+  .project .project__wrapper .project__wrapper__item {
+    width: 375px !important;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .project .project__wrapper .project__wrapper__item {
+    width: 414px !important;
+  }
+}
+
+.project .project__wrapper .project__wrapper__item .project-box__link {
+  position: relative;
+  z-index: 1000;
+}
+
 .project .project__wrapper .project__wrapper__item .s-cases-item {
   color: #fff;
   cursor: pointer;
   position: relative;
+}
+
+@media only screen and (max-width: 375px) {
+  .project .project__wrapper .project__wrapper__item .s-cases-item {
+    width: 375px !important;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .project .project__wrapper .project__wrapper__item .s-cases-item {
+    width: 414px !important;
+  }
 }
 
 .project .project__wrapper .project__wrapper__item .s-cases-item .s-cases-image {
@@ -907,14 +971,70 @@ section {
   line-height: 2.292vw;
 }
 
+@media only screen and (max-width: 800px) {
+  .project .project__wrapper .project__wrapper__item .s-cases-item .s-cases-title h3 {
+    font-size: 2vw;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .project .project__wrapper .project__wrapper__item .s-cases-item .s-cases-title h3 {
+    font-size: 4vw;
+    margin-bottom: 5px;
+  }
+}
+
 .project .project__wrapper .project__wrapper__item .s-cases-item .s-cases-title h2 {
   font-size: 1.944vw;
   line-height: 2.917vw;
   letter-spacing: -.054vw;
 }
 
+@media only screen and (max-width: 800px) {
+  .project .project__wrapper .project__wrapper__item .s-cases-item .s-cases-title h2 {
+    font-size: 3vw;
+    font-weight: 700;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .project .project__wrapper .project__wrapper__item .s-cases-item .s-cases-title h2 {
+    font-size: 6vw;
+    font-weight: 700;
+    line-height: 6vw;
+    margin-top: 10px;
+  }
+}
+
 .project__wrapper::-webkit-scrollbar {
   display: none;
+}
+
+element {
+  background-image: url("https://melriver.com/wp-content/uploads/2019/12/8-render.jpg");
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.s-header-cover {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.s-header-cover .s-header-cover, .s-header-cover .s-header-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.s-header-cover .s-header-image {
+  opacity: .4;
+  will-change: transform;
+  background-size: cover;
+  background-position: 50%;
 }
 
 .contact {

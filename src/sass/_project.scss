@@ -17,10 +17,33 @@
             text-align: center;
             background-color: #000;
 
+            @media only screen and (max-width: 375px) {
+                width: 375px !important;
+                
+            }
+
+            @media only screen and (max-width: 414px) {
+                width: 414px !important;
+            }
+
+            .project-box__link{
+                position: relative;
+                z-index: 1000;
+            }
+
             .s-cases-item {
                 color: #fff;
                 cursor: pointer;
                 position: relative;
+
+                @media only screen and (max-width: 375px) {
+                    width: 375px !important;
+                    
+                }
+
+                @media only screen and (max-width: 414px) {
+                    width: 414px !important;
+                }
 
                 .s-cases-image
                 {
@@ -62,12 +85,33 @@
                     font-weight: 600;
                     font-size: 1.25vw;
                     line-height: 2.292vw;
+                    @media only screen and (max-width: 800px) {
+                        font-size: 2vw;
+                        margin-bottom: 5px;
+                      }
+
+                      @media only screen and (max-width: 375px) {
+                        font-size: 4vw;
+                        margin-bottom: 5px;
+                      }
+                    
                 }
                 
                 .s-cases-title h2 {
                     font-size: 1.944vw;
                     line-height: 2.917vw;
                     letter-spacing: -.054vw;
+                    @media only screen and (max-width: 800px) {
+                        font-size: 3vw;
+                        font-weight: 700;
+                      }
+
+                      @media only screen and (max-width: 450px) {
+                        font-size: 6vw;
+                        font-weight: 700;
+                        line-height: 6vw;
+                        margin-top: 10px;
+                      }
                 }
                 
             }
