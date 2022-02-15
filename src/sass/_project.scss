@@ -1,5 +1,11 @@
 .project{
     grid-column: 2/14;
+    padding: 6rem;
+
+    @media only screen and (max-width: 800px) {
+        padding: 0;
+        
+    }
    
     .project__wrapper
     {

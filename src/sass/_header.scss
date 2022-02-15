@@ -150,10 +150,11 @@
 .header {
   position: relative;
   overflow: hidden;
-  min-height: 80rem;
+  min-height: 75rem;
   @media only screen and (max-width: 37.5em) {
     // phone
     min-height: 70rem;
+    margin: 0 5%;
   }
   
 
@@ -168,8 +169,8 @@
   }
   .hero {
     position: absolute;
-    top: 40%;
-    left: 10%;
+    top: 30%;
+    left: 5%;
     transform: translateY(-50%);
     @media only screen and (max-width: 56.25em) {
       // tab-land
@@ -187,28 +188,28 @@
       margin-top: -400px;
      }
       .text-container {
-        margin-top: 250px;
+        margin-top: 320px;
         @media only screen and (max-width: 375px) {
           z-index: 1;
           width: 300px;
         }
         @media only screen and (max-width: 800px) {
-           width: 600px;
+           width: 100%;
            margin-top: 400px;
          }
         h1 {
           margin-top: 24px;
-          margin-bottom: 10px;
-          font-family: Spacegrotesk, sans-serif;
+          margin-bottom: 25px;
+          font-family: $primary-font;
           color: $white;
-          font-size: 78px;
+          font-size: 64px;
           line-height: 1.05;
           letter-spacing: -0.03em;
           
           @media only screen and (max-width: 56.25em) {
-           font-size: 6vw;
+           font-size: 10vw;
            width: 100%;
-           font-weight: 200;
+           font-weight: 600;
          }
 
        
@@ -218,23 +219,23 @@
           
         }
         .subheading {
-          // font-size: 1.5vw;
-          // color: #c8c8c8;
-          max-width: 470px;
-          font-family: Karla, sans-serif;
-          font-size: 18px;
+          color: $white;
+          max-width: 50%;
+          font-size: 1.05vw;
           line-height: 1.7;
-          font-weight: 400;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 300;
+         
 
           @media only screen and (max-width: 375px) {
-            width: 300px;
-            display: inline-block;
+            width: 80px;
+            display: inline;
             font-size: 16px !important;
          }
       
     
          @media only screen and (max-width: 800px) {
-          font-size: 2.5vw;
+          font-size: 3.7vw;
          }
 
         }
@@ -261,11 +262,14 @@
     margin-top: -120px;
     -webkit-box-align: center;
 
-    @media only screen and (max-width: 56.25em) {
+   
+     @media only screen and (max-width: 56.25em) {
       position: absolute;
-      bottom: 0;
+      top: 500px;
       // display: none;
    }
+
+
 
      .magic-mouse {
        position: relative;

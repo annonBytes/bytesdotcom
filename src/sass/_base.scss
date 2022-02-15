@@ -288,8 +288,8 @@ section {
 // cursor
 
 .cursor {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   border: 2.5px solid $white;
   border-radius: 50%;
   position: absolute;
@@ -338,6 +338,14 @@ section {
   font-size: 2.5rem;
   letter-spacing: -1px;
   text-transform: capitalize;
+} 
+
+.description {
+   margin: 40px 0;
+
+   @media only screen and (max-width: 800px) {
+    margin: 20px 10%;   
+  }
 }
 
 .paragraph {
@@ -385,6 +393,10 @@ section {
 }
 .mb-s {
   margin-bottom: 1.3rem;
+
+  @media only screen and (max-width: 800px) {
+    margin: 0 10%;   
+  }
 }
 .mt-s {
   margin-top: 1rem;
